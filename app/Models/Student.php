@@ -21,7 +21,7 @@ class Student extends Model
 	{
 		$totalScore = $this->tests()->sum('result');
 
-		$averageScore = $totalScore / $this->tests()->count();
+		$averageScore = $this->tests()->count() ? $totalScore / $this->tests()->count() : 0;
 
 		return number_format($averageScore, 2);
 	}
