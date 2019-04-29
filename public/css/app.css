@@ -1,0 +1,342 @@
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+	background-image: url("../images/background.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	color: #151515;
+	font-family: 'Bai Jamjuree', sans-serif;
+}
+
+body, body * {
+	box-sizing: border-box;
+}
+
+.clear {
+	clear: both;
+}
+
+.app-button-default,
+.app-button-default:active,
+.app-button-default:visited {
+	color: inherit;
+	text-decoration: none;
+}
+
+.app-button-default {
+	border: 2px solid #fff;
+	padding: 10px 20px;
+	border-radius: 3px;
+	background-color: transparent;
+	font-size: 16px;
+}
+
+.app-button-default:hover {
+	text-decoration: none;
+	background-color: rgba(255, 255, 255, 0.84);
+}
+
+h1 {
+	font-size: 20px;
+	margin: 0 0 20px 0;
+}
+
+
+
+
+.wrapper {
+	max-width: 1200px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: inline-block;
+	padding: 20px;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.84);
+}
+
+header .app-name {
+	display: inline-block;
+	font-size: 24px;
+}
+
+header .app-reset {
+	float: right;
+}
+
+header .menu {
+	float: right;
+}
+
+header .menu li {
+	display: inline-block;
+}
+
+header .menu li a {
+	color: inherit;
+	text-decoration: none;
+	display: inline-block;
+	margin-left: 20px;
+}
+
+header .menu li a:hover,
+header .menu li a.active {
+	text-decoration: underline;
+}
+
+
+
+
+.main {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: inline-block;
+	padding: 20px;
+	width: 90%;
+	max-width: 1200px;
+	height: 70%;
+	background-color: rgba(255, 255, 255, 0.84);
+	box-sizing: border-box;
+}
+
+.main .info {
+	margin: 10px 0;
+}
+
+.main .setup-app {
+
+}
+
+.main .setup-app .depot-count {
+	padding: 10px;
+	width: 100%;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: 0;
+	margin-bottom: 20px;
+	font-size: 18px;
+}
+
+.main .setup-app .setup-submit {
+	float: right;
+}
+
+.main .setup-app .setup-submit.disabled,
+.main .setup-app .find-submit.disabled {
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+.main .find-distance .select-depots {
+	width: 49%;
+	border-radius: 0;
+	display: inline-block;
+}
+
+.main .find-distance .find-submit {
+	float: right;
+	margin-top: 20px;
+}
+
+.select2-results {
+	color: #000;
+}
+
+.main .find-distance .shortestPathTitle {
+	margin: 10px 0;
+}
+
+
+
+.add-result-btn {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+.add-result {
+	position: fixed;
+	background-color: rgba(255, 255, 255, 0.84);
+	z-index: 10;
+	width: 600px;
+	height: 250px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 20px;
+	display: none;
+}
+
+.add-result-bg {
+	position: fixed;
+	background-color: #000;
+	opacity: 0.7;
+	z-index: 9;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+.add-result h3 {
+	font-size: 24px;
+	margin-bottom: 15px;
+	appearance: none;
+}
+
+.add-result .form select {
+	display: inline-block;
+	width: 170px;
+	margin-right: 10px;
+	appearance: none;
+}
+
+.add-result .form input {
+	width: 150px;
+}
+
+.add-result #add-result-submit {
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	appearance: none;
+}
+
+.add-result .add-result-close {
+	position: absolute;
+	top: 2px;
+	right: 10px;
+	font-size: 30px;
+	line-height: 1;
+	cursor: pointer;
+}
+
+.add-result-error {
+	margin-top: 10px;
+	color: red;
+	font-size: 14px;
+}
+
+
+.tests {
+	overflow: auto;
+	height: 90%;
+	margin-top: 50px;
+}
+
+.tests .test {
+	border-bottom: 1px solid black;
+}
+
+.tests .test .quick-info {
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	cursor: pointer;
+}
+
+.tests .test .quick-info:hover,
+.tests .test.open .quick-info {
+	background: #cccccc;
+}
+
+.tests .test .quick-info > div {
+	display: inline-block;
+	width: 200px;
+}
+
+.tests .test .quick-info .code {
+	text-align: left;
+}
+
+.tests .test .quick-info .name,
+.tests .test .quick-info .term {
+	text-align: center;
+}
+
+.tests .test .quick-info .average {
+	text-align: right;
+}
+
+.tests .test .students {
+	background: #cccccc;
+	padding: 10px;
+}
+
+.tests .test .students {
+	display: none;
+}
+
+.tests .test.open .students {
+	display: block;
+}
+
+.tests .test .students .highest-score,
+.tests .test .students .lowest-score,
+.tests .test .students .results-count,
+.tests .test .students .average-score {
+	width: 24%;
+	text-align: center;
+	display: inline-block;
+}
+
+.tests .test .students .students-list {
+	margin-top: 10px;
+}
+
+.tests .test .students .students-list .student {
+	border-top: 1px solid black;
+	padding: 5px 0;
+}
+
+.tests .test .students .students-list .student > div {
+	display: inline-block;
+	width: 49%;
+	text-align: left;
+}
+
+
+
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	display: inline-block;
+	padding: 20px;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.84);
+}
+
+.footer .entity-count {
+	text-align: left;
+}
+
+.footer .entity-count > * {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.footer .entity-count .depot-count {
+	margin-right: 15px;
+}
+
+.footer .entity-count .count-label {
+	font-weight: 700;
+}
